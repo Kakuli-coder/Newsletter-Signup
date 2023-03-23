@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const https = require("https");
 const { response } = require("express");
 
@@ -11,7 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/signup.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/", (req, res) => {
@@ -65,10 +64,3 @@ app.post("/failure", (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server is running on port 3000.`);
 });
-
-// Mailchimp API:
-// API Key -
-// 83cb87e4cc2d3b9630e972ec2dd7e94e-us11
-
-// Audience ID -
-// dc326de8f1
