@@ -1,7 +1,7 @@
 {
   "name": "newsletter-signup",
   "version": "1.0.0",
-  "description": "This is a landing page website that helps store mailing information of users on Mailchimp.",
+  "description": "A Newsletter Signup Page that lets the user subscribe to the Newsletters from 'Learn with Engineers'. The website uses Mailchimp API to send Newsletters to email addresses of subscribers.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
