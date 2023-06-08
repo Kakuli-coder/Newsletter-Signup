@@ -4,14 +4,17 @@
   "description": "A Newsletter Signup Page that lets the user subscribe to the Newsletters from 'Learn with Engineers'. The website uses Mailchimp API to send Newsletters to email addresses of subscribers.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Kakuli",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
+    "nodemon": "^2.0.22",
     "request": "^2.88.2"
   }
 }

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -14,9 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
-    const email = req.body.email;
+    const { firstName, lastName, email } = req.body;
     // console.log(firstName, lastName, email);
 
     const data = {
@@ -34,17 +33,17 @@ app.post("/", (req, res) => {
 
     const JSONData = JSON.stringify(data);
 
-    const url = "https://us11.api.mailchimp.com/3.0/lists/dc326de8f1";
+    const url = `https://${process.env.MAILCHMIP_DATA_CENTER}.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_EMAIL_LIST_ID}`;
 
     const options = {
         method: "POST",
-        auth: "kakuli:83cb87e4cc2d3b9630e972ec2dd7e94e-us11"
+        auth: `kakuli:${process.env.MAILCHIMP_API_KEY}`
     };
 
     const request = https.request(url, options, (response) => {
         response.on("data", (data) => {
             // console.log(JSON.parse(data));
-            if (response.statusCode === 200) {              
+            if (response.statusCode === 200) {
                 res.sendFile(__dirname + "/success.html");
             } else {
                 res.sendFile(__dirname + "/failure.html");
