@@ -3,6 +3,10 @@
 - A Newsletter Signup Page that lets the user subscribe to the Newsletters from 'Learn with Engineers'. 
 - The website uses Mailchimp API to send Newsletters to email addresses of subscribers.
 
+## Live Application URL
+
+Go to Deployed Application link 👇 <br />
+<a href="https://newsletter-signup-ddej.onrender.com/" alt="App-link" target="_blank">Newsletter Signup</a> </br>
 
 ## Newsletter Signup Preview
 
